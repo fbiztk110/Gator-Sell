@@ -49,6 +49,19 @@ CREATE TABLE `picture`(
   FOREIGN KEY (post_id) REFERENCES post(id),
   PRIMARY KEY (`id`)
 );
+
+-- 
+-- Table structure for table `category`
+--
+
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category`(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
 INSERT INTO category (name, created_at) VALUES ('Cars', now());
 INSERT INTO category (name, created_at) VALUES ('Books', now());
 INSERT INTO category (name, created_at) VALUES ('Free Stuff', now());
@@ -64,17 +77,6 @@ INSERT INTO category (name, created_at) VALUES ('Arts', now());
 INSERT INTO category (name, created_at) VALUES ('Clothes', now());
 INSERT INTO category (name, created_at) VALUES ('Others', now());
 
--- 
--- Table structure for table `category`
---
-
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE `category`(
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-);
 
 
 -- database: user
