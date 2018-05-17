@@ -1,3 +1,15 @@
+-- 
+-- Table structure for table `category`
+--
+
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category`(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
 --
 -- Table structure for table `users`
 --
@@ -50,17 +62,7 @@ CREATE TABLE `picture`(
   PRIMARY KEY (`id`)
 );
 
--- 
--- Table structure for table `category`
---
 
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE `category`(
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-);
 
 INSERT INTO category (name, created_at) VALUES ('Cars', now());
 INSERT INTO category (name, created_at) VALUES ('Books', now());
